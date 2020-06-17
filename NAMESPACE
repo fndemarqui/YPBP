@@ -2,5 +2,6 @@
 
 import(Rcpp)
 import(methods)
+import(survival)
 importFrom(rstan,sampling)
 useDynLib(YPBP, .registration = TRUE)

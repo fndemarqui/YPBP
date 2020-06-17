@@ -1,2 +1,4 @@
 ^YPBP\.Rproj$
 ^\.Rproj\.user$
+^\.travis\.yml$
+^inst/script_development\.R$
