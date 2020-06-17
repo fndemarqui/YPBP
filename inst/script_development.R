@@ -11,5 +11,5 @@ usethis::use_build_ignore("inst/script_development.R")
 
 # for github:
 git add .
-git commit -m "adding stan files"
+git commit -m "adding CITATION"
 git push
