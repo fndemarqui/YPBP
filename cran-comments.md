@@ -17,4 +17,4 @@ Duration: 17m 58.8s
 
 0 errors ✓ | 0 warnings ✓ | 2 notes x
 
-* This is a new release.
+* This is the second submission of a new release. All fixes requested in the previous submission were done.
