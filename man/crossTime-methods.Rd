@@ -26,14 +26,14 @@ the crossing survival time
 Computes the crossing survival times along with their corresponding confidence/credible intervals.
 }
 \examples{
-\dontrun{
+\donttest{
 # ML approach:
-library(ypbp)
+library(YPBP)
 mle <- ypbp(Surv(time, status)~arm, data=ipass, approach="mle")
 summary(mle)
 newdata1 <- data.frame(arm=0)
 newdata2 <- data.frame(arm=1)
-tcross <- crossTime(mle, newdata1, newdata2)
+tcross <- crossTime(mle, newdata1, newdata2, nboot = 100)
 tcross
 ekm <- survival::survfit(Surv(time, status)~arm, data=ipass)
 newdata <- data.frame(arm=0:1)
@@ -44,7 +44,7 @@ with(St, lines(time, surv[[2]], col=2))
 abline(v=tcross, col="blue")
 
 # Bayesian approach:
-bayes <- ypbp(Surv(time, status)~arm, data=ipass, approach="bayes")
+bayes<-ypbp(Surv(time,status)~arm,data=ipass,approach="bayes",chains=2,iter=100)
 summary(bayes)
 newdata1 <- data.frame(arm=0)
 newdata2 <- data.frame(arm=1)

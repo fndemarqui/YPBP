@@ -20,7 +20,7 @@ A matrix (or vector) with columns giving lower and upper confidence limits for t
 This function returns the estimated confidence intervals for the regression coefficients when the maximum likelihood estimation approach is used in the model fitting.
 }
 \examples{
-\dontrun{
+\donttest{
 fit <- ypbp(Surv(time, status)~arm, data=ipass)
 confint(fit)
 }

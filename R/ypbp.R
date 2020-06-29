@@ -154,6 +154,17 @@ ypbp2.bayes <- function(status, Z, X, degree, tau,
 #' @param ... Arguments passed to either `rstan::optimizing` or `rstan::sampling` .
 #' @return ypbp returns an object of class "ypbp" containing the fitted model.
 #'
+#' @examples
+#' \donttest{
+#' library(YPBP)
+#' mle1 <- ypbp(Surv(time, status)~trt, data=gastric, baseline = "hazard")
+#' mle2 <- ypbp(Surv(time, status)~trt, data=gastric, baseline = "odds")
+#' bayes1 <- ypbp(Surv(time, status)~trt, data=gastric, baseline = "hazard",
+#'                approach = "bayes", chains = 2, iter = 500)
+#' bayes2 <- ypbp(Surv(time, status)~trt, data=gastric, baseline = "odds",
+#'                approach = "bayes", chains = 2, iter = 500)
+#' }
+#'
 #'
 ypbp <- function(formula, data, degree=NULL, tau=NULL,
                  approach = c("mle", "bayes"), baseline=c("hazard", "odds"),

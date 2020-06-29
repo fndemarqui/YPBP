@@ -43,3 +43,16 @@ ypbp returns an object of class "ypbp" containing the fitted model.
 \description{
 Fits the Yang and Prentice model with either the baseline hazard hazard or the baseline odds modeled via Bernstein polynomials.
 }
+\examples{
+\donttest{
+library(YPBP)
+mle1 <- ypbp(Surv(time, status)~trt, data=gastric, baseline = "hazard")
+mle2 <- ypbp(Surv(time, status)~trt, data=gastric, baseline = "odds")
+bayes1 <- ypbp(Surv(time, status)~trt, data=gastric, baseline = "hazard",
+               approach = "bayes", chains = 2, iter = 500)
+bayes2 <- ypbp(Surv(time, status)~trt, data=gastric, baseline = "odds",
+               approach = "bayes", chains = 2, iter = 500)
+}
+
+
+}

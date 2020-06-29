@@ -18,7 +18,7 @@ The model matrix (or matrices) for the fit.
 Reconstruct the model matrix (or matrices if the alternative formulation of the YP model is used) for a ypbp model.
 }
 \examples{
-\dontrun{
+\donttest{
 fit <- ypbp(Surv(time, status)~arm, data=ipass)
 model.matrix(fit)
 }

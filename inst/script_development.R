@@ -11,15 +11,15 @@ usethis::use_build_ignore(".travis.yml")
 usethis::use_build_ignore("inst/script_development.R")
 devtools::test()
 devtools::check()
-#devtools::check_win_devel()
-rhub::check_for_cran()
+devtools::check_win_release()
+#rhub::check_for_cran()
 
 
 devtools::submit_cran()
 
 
 
-2# for github:
+# for github:
 # git add .
 # git commit -m "adding R files"
 # git push

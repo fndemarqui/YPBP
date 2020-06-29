@@ -18,7 +18,7 @@ the estimated regression coefficients.
 This function returns the estimated regression coefficients when the maximum likelihood estimation approach is used in the model fitting.
 }
 \examples{
-\dontrun{
+\donttest{
 fit <- ypbp(Surv(time, status)~arm, data=ipass)
 coef(fit)
 }

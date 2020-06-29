@@ -33,7 +33,8 @@ with(St, lines(time, surv[[1]]))
 with(St, lines(time, surv[[2]], col=2))
 
 # Bayesian approach:
-bayes <- ypbp(Surv(time, status)~arm, data=ipass, approach="bayes")
+bayes <- ypbp(Surv(time, status) ~ arm, data = ipass,
+              approach = "bayes", chains = 2, iter = 100)
 summary(bayes)
 ekm <- survival::survfit(Surv(time, status)~arm, data=ipass)
 newdata <- data.frame(arm=0:1)

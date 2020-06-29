@@ -4,8 +4,8 @@ library(YPBP)
 data("gastric")
 
 # fiting the models:
-fit1 <- ypbp(Surv(time, status)~trt, data=gastric, baseline = "hazard", approach = "bayes")
-fit2 <- ypbp(Surv(time, status)~trt, data=gastric, baseline = "odds", approach = "bayes")
+fit1 <- ypbp(Surv(time, status)~trt, data=gastric, baseline = "hazard", approach = "bayes", chains = 2, iter = 500)
+fit2 <- ypbp(Surv(time, status)~trt, data=gastric, baseline = "odds", approach = "bayes", chains = 2, iter = 500)
 
 # summarizing:
 summary(fit1)

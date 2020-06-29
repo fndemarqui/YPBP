@@ -45,7 +45,7 @@ vcov.ypbp <- function(object, ...){
 #' @param ... further arguments passed to or from other methods.
 #' @return  the estimated regression coefficients.
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' fit <- ypbp(Surv(time, status)~arm, data=ipass)
 #' coef(fit)
 #' }
@@ -78,7 +78,7 @@ confint <- function(object, ...) UseMethod("confint")
 #' @param ... further arguments passed to or from other methods.
 #' @return  A matrix (or vector) with columns giving lower and upper confidence limits for the regression coefficients. These will be labeled as (1-level)/2 and 1 - (1-level)/2 in \% (by default 2.5\% and 97.5\%).
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' fit <- ypbp(Surv(time, status)~arm, data=ipass)
 #' confint(fit)
 #'}
@@ -109,7 +109,7 @@ confint.ypbp <- function(object, level=0.95, ...){
 #' @param ... further arguments passed to or from other methods.
 #' @return  The model matrix (or matrices) for the fit.
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' fit <- ypbp(Surv(time, status)~arm, data=ipass)
 #' model.matrix(fit)
 #'}
